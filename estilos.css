@@ -1,0 +1,81 @@
+/* Estilos Generales */
+body {
+    margin: 0;
+    background-color: #ecefe6;
+}
+/* Estilos del Encabezado */
+header {
+    width: 100%;
+    height: 180px;
+}
+header img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+/* Estilos del menu */
+nav{
+    background-color: #0e1726;
+}
+nav ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+nav > ul {
+    display: flex;
+}
+nav li {
+    position: relative;
+}
+nav a {
+    display: block;
+    color: #f1f5f9;
+    text-decoration: none;
+    padding: 15px 20px;
+}
+nav a:hover {
+    background-color: #1d6fa5;
+}
+/* Estilos del submenu */
+nav li ul {
+    display: none;
+    position: absolute;
+    background-color: #162235;
+    min-width: 180px;
+}
+nav li:hover ul{
+    display: block;
+}
+/* Estilos del pie de página */
+footer{
+    background-color: #0e1726;
+    color: #f1f5f9;
+    display: flex;
+    align-items: center;
+    padding: 20px;
+}
+footer img{
+    width: 80px;
+    height: 80px;
+    margin-right: 20px;
+}
+/*Estilos para el cuerpo de la página */
+section {
+    display: flex;
+    gap: 20px;
+    padding: 20px;
+    min-width: 350px;
+}
+.principal{
+    width: 70%;
+    background-color: #ffffff;
+    padding: 20px;
+    border: 2px solid #1d6fa5;
+}
+.secundario{
+    width: 30%;
+    background-color: #ffffff;
+    padding: 20px;
+    border: 2px solid #d97706;
+}
