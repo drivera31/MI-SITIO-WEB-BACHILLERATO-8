@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Mi sitio web - Práctica de posiciones</title>
+    <!-- Hacemos referencia a los estilos de mi página -->
+    <link rel="stylesheet" href="estilos.css">
+    <!-- Estilos específicos para esta práctica de posiciones -->
+    <style>
+        /* Contenedor principal de la práctica */
+        /* Contenedor principal de la práctica */
+       /* Contenedor principal de la práctica */
+        .contenedor-practica {
+            width: 100%;
+            background-color: #f1f5f9;
+            padding: 20px;
+            border: 2px solid #1d6fa5;
+            position: relative; 
+            height: 2000px; /* ¡Aumentamos mucho la altura aquí! */
+        }
+        /* Estilo base para las cajas de ejemplo */
+        .caja {
+            width: 100px; /* Ajustado a 100px como en el tutorial */
+            height: 100px; /* Ajustado a 100px como en el tutorial */
+            color: white;
+            padding: 10px;
+            text-align: center;
+            font-weight: bold;
+            border: 2px solid #333;
+            margin-bottom: 10px;
+        }
+
+        /* 1. Posición Static (La posición por defecto) */
+        .caja-static {
+            background-color: #4CAF50; /* Verde */
+            position: static;
+        }
+
+        /* 2. Posición Relative (Se mueve respecto a su posición original) */
+        .caja-relative {
+            background-color: #2196F3; /* Azul */
+            position: relative;
+            /* Aquí están las medidas EXACTAS del tutorial para que quede al lado */
+            top: 100px; 
+            left: 100px; 
+        }
+
+        /* 3. Posición Absolute (Se mueve respecto al contenedor padre más cercano que tenga position relative) */
+        .caja-absolute {
+            background-color: #f44336; /* Rojo */
+            position: absolute;
+            top: 5px; /* Medida del tutorial */
+            right: 5px; /* Medida del tutorial */
+        }
+
+        /* 4. Posición Fixed (Se fija a la ventana del navegador, no se mueve al hacer scroll) */
+        .caja-fixed {
+            background-color: #9C27B0; /* Morado */
+            position: fixed;
+            bottom: 10px; /* Medida del tutorial */
+            right: 10px; /* Medida del tutorial */
+            z-index: 100; /* Asegura que se vea por encima de otros elementos */
+        }
+
+        /* 5. Posición Sticky (Se comporta como relative hasta que haces scroll y llega a un punto, entonces se queda fija) */
+        .caja-sticky {
+            background-color: #FF9800; /* Naranja */
+            position: sticky;
+            top: 10px; /* Medida del tutorial */
+            z-index: 50;
+        }
+    </style>
+</head>
+<body>
+    <header> 
+        <img src="fondo.jpg" alt="Fondo principal">
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Página principal</a></li>
+            <li><a href="#">Conóceme</a>
+                <ul>
+                    <li><a href="informacion.html">Información personal</a></li>
+                    <li><a href="pasatiempos.html">Pasatiempos</a></li>
+                </ul>
+            </li>
+            <li><a href="#">Segunda parcial</a>
+                <ul>
+                    <li><a href="#">Práctica uno</a></li>
+                    <li><a href="posiciones.html">Práctica de posiciones</a></li>
+                    <li><a href="mundodigital.html">Mi mundo digital</a></li>
+                </ul>
+            </li>
+            <li><a href="#">Tercer parcial</a>
+                <ul>
+                    <li><a href="#">Práctica uno</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+    
+    <section>
+        <div class="contenedor-practica">
+            <h2>Demostración de Posiciones en CSS</h2>
+            <p>Esta página demuestra el funcionamiento de las diferentes propiedades de `position` en CSS.</p>
+
+            <div class="caja caja-sticky">
+                Soy Sticky<br><small>(Hago scroll hasta pegarme arriba)</small>
+            </div>
+
+            <div class="caja caja-static">
+                Soy Static<br><small>(Flujo normal)</small>
+            </div>
+            
+            <div class="caja caja-relative">
+                Soy Relative<br><small>(Movido desde mi inicio)</small>
+            </div>
+            
+            <div class="caja caja-absolute">
+                Soy Absolute<br><small>(Posicionado respecto al contenedor padre)</small>
+            </div>
+            
+            <div class="caja caja-fixed">
+                Soy Fixed<br><small>(Fijo a la ventana del navegador)</small>
+            </div>
+            
+            <!-- Añadimos algo de texto para forzar el scroll y que veas el efecto de Sticky y Fixed -->
+            <br><br><br><br><br><br><br><br><br><br><br><br>
+            <p>Sigue haciendo scroll hacia abajo...</p>
+            <br><br><br><br><br><br><br><br><br><br><br><br>
+        </div>
+    </section>
+
+    <footer>
+        <img src="logo_ucol.png" alt="Logo Universidad de Colima">
+        <div>
+            <p><strong>Universidad de Colima</strong></p>
+            <p>Bachillerato 8</p>
+            <p>Programación en Internet I</p>
+        </div>
+    </footer>
+</body>
+</html>
