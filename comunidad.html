@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Mi sitio web - Comunidad y Tecnología</title>
+    <!-- Tu hoja de estilos externa, tal como lo pide la instrucción -->
+    <link rel="stylesheet" href="estilos.css">
+    
+    <!-- Estilos específicos para organizar esta página -->
+    <style>
+        /* Estilo para poner las barras laterales (asides) a los lados y el contenido en el centro */
+        .contenedor-layout {
+            display: flex;
+            justify-content: space-between;
+            padding: 20px;
+            gap: 20px;
+        }
+
+        /* El contenido principal ocupará más espacio */
+        .contenido-principal {
+            flex-grow: 1;
+            background-color: #f8f9fa;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+        }
+
+        /* Estilo para los dos asides que pidió el profesor */
+        aside {
+            width: 250px;
+            background-color: #e9ecef;
+            padding: 15px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+        }
+
+        /* Estilos para la tabla requerida */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+        th, td {
+            border: 1px solid #999;
+            padding: 10px;
+            text-align: left;
+        }
+        th {
+            background-color: #1d6fa5;
+            color: white;
+        }
+
+        /* Estilos para la lista de conceptos (Glosario) */
+        dl {
+            background-color: #fff;
+            padding: 15px;
+            border-left: 5px solid #1d6fa5;
+            margin-bottom: 20px;
+        }
+        dt {
+            font-weight: bold;
+            color: #1d6fa5;
+            margin-top: 10px;
+            font-size: 1.1em;
+        }
+        dd {
+            margin-left: 20px;
+            margin-bottom: 10px;
+        }
+
+        /* Contenedor del video */
+        .contenedor-video {
+            text-align: center;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header> 
+        <img src="fondo.jpg" alt="Fondo principal">
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Página principal</a></li>
+            <li><a href="#">Conóceme</a>
+                <ul>
+                    <li><a href="informacion.html">Información personal</a></li>
+                    <li><a href="pasatiempos.html">Pasatiempos</a></li>
+                </ul>
+            </li>
+            <li><a href="#">Segunda parcial</a>
+                <ul>
+                    <li><a href="#">Práctica uno</a></li>
+                    <li><a href="posiciones.html">Práctica de posiciones</a></li>
+                    <li><a href="mundodigital.html">Mi mundo digital</a></li>
+                    <!-- Enlace a esta nueva página -->
+                    <li><a href="comunidad.html">Tecnologías en comunidad</a></li>
+                </ul>
+            </li>
+            <li><a href="#">Tercer parcial</a>
+                <ul>
+                    <li><a href="#">Práctica uno</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+    
+    <section>
+        <div class="contenedor-layout">
+            
+            <!-- PRIMER ASIDE (Requisito 1 de estructura) -->
+            <aside>
+                <h3>Datos Curiosos</h3>
+                <p>¿Sabías que la primera página web del mundo se creó en 1991 y solo tenía texto?</p>
+                <hr>
+                <p>Hoy en día, usamos la tecnología para todo: desde comunicarnos hasta pedir comida.</p>
+            </aside>
+
+            <!-- CONTENIDO PRINCIPAL -->
+            <div class="contenido-principal">
+                <h2>Tecnologías Digitales en la Vida Cotidiana</h2>
+                <p>La tecnología ha transformado la manera en que vivimos, trabajamos e interactuamos con nuestra comunidad.</p>
+
+                <!-- TABLA (Requisito 2: tabla, tr, th, td con 4 tecnologías) -->
+                <h3>Impacto de las Tecnologías</h3>
+                <table>
+                    <tr>
+                        <th>Nombre de la tecnología</th>
+                        <th>Uso principal</th>
+                        <th>Una ventaja</th>
+                        <th>Un posible riesgo</th>
+                    </tr>
+                    <tr>
+                        <td>Teléfonos Inteligentes</td>
+                        <td>Comunicación y acceso a internet</td>
+                        <td>Movilidad y conectividad constante</td>
+                        <td>Adicción a pantallas</td>
+                    </tr>
+                    <tr>
+                        <td>Redes Sociales</td>
+                        <td>Interacción y entretenimiento</td>
+                        <td>Conectar con personas lejanas</td>
+                        <td>Desinformación (Fake News)</td>
+                    </tr>
+                    <tr>
+                        <td>Banca Móvil (Apps)</td>
+                        <td>Gestión de dinero y pagos</td>
+                        <td>Ahorro de tiempo sin ir al banco</td>
+                        <td>Fraudes o robos de datos</td>
+                    </tr>
+                    <tr>
+                        <td>Plataformas de Streaming</td>
+                        <td>Ver películas y series</td>
+                        <td>Entretenimiento a la carta</td>
+                        <td>Sedentarismo</td>
+                    </tr>
+                </table>
+
+                <!-- LISTA DE DEFINICIONES (Requisito 3: dl, dt, dd con 3 conceptos) -->
+                <h3>Glosario Tecnológico</h3>
+                <dl>
+                    <dt>Inteligencia Artificial (IA)</dt>
+                    <dd>Simulación de procesos de inteligencia humana por parte de sistemas informáticos, como el reconocimiento de voz o la toma de decisiones.</dd>
+                    
+                    <dt>Ciberseguridad</dt>
+                    <dd>Práctica de proteger sistemas, redes y programas de ataques digitales, robo de información o daños a equipos.</dd>
+                    
+                    <dt>Computación en la Nube</dt>
+                    <dd>Servicios de computación a través de internet (la nube), como almacenamiento de fotos o bases de datos, sin usar el disco duro de tu computadora.</dd>
+                </dl>
+
+                
+                <div class="contenedor-video">
+                    <h3>Aprende más sobre nuestro mundo digital</h3>
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/5Izihr4BCbo" title="Por qué 2026 será clave para la Inteligencia Artificial" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                </div>
+            </div>
+
+            
+            <aside>
+                <h3>Enlaces Útiles</h3>
+                <ul>
+                    <li><a href="https://www.coluc.edu.mx" target="_blank">Universidad de Colima</a></li>
+                    <li><a href="https://github.com" target="_blank">Mi GitHub</a></li>
+                    <li><a href="index.html">Volver al inicio</a></li>
+                </ul>
+            </aside>
+
+        </div>
+    </section>
+
+    <footer>
+        <img src="logo_ucol.png" alt="Logo Universidad de Colima">
+        <div>
+            <p><strong>Universidad de Colima</strong></p>
+            <p>Bachillerato 8</p>
+            <p>Programación en Internet I</p>
+        </div>
+    </footer>
+</body>
+</html>
