@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Conversor de temperaturas - Mi sitio web</title>
+    <link rel="stylesheet" href="estilos.css">
+    
+    <style>
+        .contenedor-formulario {
+            background-color: #f1f5f9;
+            padding: 30px;
+            border: 2px solid #1d6fa5;
+            margin: 20px auto;
+            max-width: 400px;
+            text-align: center;
+            border-radius: 8px;
+        }
+        .contenedor-formulario input, .contenedor-formulario select {
+            padding: 8px;
+            margin: 10px 0;
+            width: 80%;
+            font-size: 16px;
+        }
+        .contenedor-formulario button {
+            padding: 10px 20px;
+            background-color: #1d6fa5;
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+            border-radius: 5px;
+            margin-top: 10px;
+        }
+        .contenedor-formulario button:hover {
+            background-color: #155580;
+        }
+        #resultado {
+            margin-top: 20px;
+            font-size: 16px;
+            color: #333;
+            text-align: left;
+            background-color: #e2e8f0;
+            padding: 15px;
+            border-radius: 5px;
+            display: none; 
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="fondo.jpg" alt="Fondo principal">
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Página principal</a></li>
+            <li><a href="#">Conóceme</a>
+                <ul>
+                    <li><a href="informacion.html">Información personal</a></li>
+                    <li><a href="pasatiempos.html">Pasatiempos</a></li>
+                </ul>
+            </li>
+            <li><a href="#">Segunda parcial</a>
+                <ul>
+                    <li><a href="#">Práctica uno</a></li>
+                    <li><a href="posiciones.html">Práctica de posiciones</a></li>
+                    <li><a href="mundodigital.html">Mi mundo digital</a></li>
+                    <li><a href="comunidad.html">Tecnologías en comunidad</a></li>
+                </ul>
+            </li>
+            <li><a href="#">Tercer parcial</a>
+                <ul>
+                    <li><a href="edad_mayor_menor.html">Verificador de edad</a></li>
+                    <!-- Aquí quedó la nueva actividad -->
+                    <li><a href="temperaturas.html">Conversor de temperaturas</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+    
+    <section>
+        <div class="contenedor-formulario">
+            <h2>Conversor de temperaturas</h2>
+            
+            <input type="number" id="campoTemp" placeholder="Ingresa la temperatura">
+            
+            <select id="tipoConversion">
+                <option value="c_a_f">Celsius a Fahrenheit</option>
+                <option value="f_a_c">Fahrenheit a Celsius</option>
+            </select>
+            <br>
+            <button id="btnConvertir">Convertir</button>
+            
+            <div id="resultado"></div>
+        </div>
+    </section>
+
+    <footer>
+        <img src="logo_ucol.png" alt="Logo Universidad de Colima">
+        <div>
+            <p><strong>Universidad de Colima</strong></p>
+            <p>Bachillerato 8</p>
+            <p>Programación en Internet I</p>
+        </div>
+    </footer>
+
+    <script src="temperaturas.js"></script>
+</body>
+</html>
