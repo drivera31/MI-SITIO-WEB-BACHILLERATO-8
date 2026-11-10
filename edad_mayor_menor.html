@@ -1,33 +1,95 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Verificador de edad</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 40px;
-    }
-    .container {
-      max-width: 300px;
-      display: flex;
-      flex-direction: column;
-      gap: 12px;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <title>Verificador de Edad - Mi sitio web</title>
+    <!-- Conectamos con tus estilos principales -->
+    <link rel="stylesheet" href="estilos.css">
+    
+    <!-- Unos pequeños estilos solo para que el formulario se vea bien centrado y ordenado -->
+    <style>
+        .contenedor-formulario {
+            background-color: #f1f5f9;
+            padding: 30px;
+            border: 2px solid #1d6fa5;
+            margin: 20px auto;
+            max-width: 400px;
+            text-align: center;
+            border-radius: 8px;
+        }
+        .contenedor-formulario input {
+            padding: 8px;
+            margin: 15px 0;
+            width: 80%;
+            font-size: 16px;
+        }
+        .contenedor-formulario button {
+            padding: 10px 20px;
+            background-color: #1d6fa5;
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+            border-radius: 5px;
+        }
+        .contenedor-formulario button:hover {
+            background-color: #155580;
+        }
+    </style>
 </head>
 <body>
+    <header>
+        <img src="fondo.jpg" alt="Fondo principal">
+    </header>
 
-  <h1>Verificador de edad</h1>
+    <nav>
+        <ul>
+            <li><a href="index.html">Página principal</a></li>
+            <li><a href="#">Conóceme</a>
+                <ul>
+                    <li><a href="informacion.html">Información personal</a></li>
+                    <li><a href="pasatiempos.html">Pasatiempos</a></li>
+                </ul>
+            </li>
+            <li><a href="#">Segunda parcial</a>
+                <ul>
+                    <li><a href="#">Práctica uno</a></li>
+                    <li><a href="posiciones.html">Práctica de posiciones</a></li>
+                    <li><a href="mundodigital.html">Mi mundo digital</a></li>
+                    <li><a href="comunidad.html">Tecnologías en comunidad</a></li>
+                </ul>
+            </li>
+           <li><a href="#">Tercer parcial</a>
+                <ul>
+                    <li><a href="edad_mayor_menor.html">Verificador de edad</a></li>
+                    <li><a href="temperaturas.html">Conversor de temperaturas</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+    
+    <section>
+        <!-- Aquí metemos el formulario dentro de tu estructura -->
+        <div class="contenedor-formulario">
+            <h2>Verificador de edad</h2>
+            <p>Ingresa tu edad para verificar si eres mayor o menor.</p>
+            
+            <input type="number" id="campoEdad" placeholder="Ej. 18" min="0">
+            <br>
+            <button id="btnVerificar">Verificar</button>
+        </div>
+    </section>
 
-  <div class="container">
-    <label for="campoEdad">Ingresa tu edad:</label>
-    <input type="number" id="campoEdad" placeholder="Ej. 18" min="0">
-    <button id="btnVerificar">Verificar</button>
-  </div>
+    <footer>
+        <img src="logo_ucol.png" alt="Logo Universidad de Colima">
+        <div>
+            <p><strong>Universidad de Colima</strong></p>
+            <p>Bachillerato 8</p>
+            <p>Programación en Internet I</p>
+        </div>
+    </footer>
 
-  <!-- Enlace al archivo JavaScript externo -->
-  <script src="script.js"></script>
+    <!-- Vinculamos tu archivo de JavaScript que subiste a GitHub -->
+    <script src="script.js"></script>
 </body>
 </html>
