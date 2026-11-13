@@ -2,27 +2,24 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Mi sitio web</title>
+    <title>Mi sitio web - Pasatiempos</title>
     <!-- Hacemos referencia a los estilos de mi página -->
     <link rel="stylesheet" href="estilos.css">
 </head>
 <body>
-    <header>
+    <header> 
         <img src="fondo.jpg" alt="Fondo principal">
     </header>
-    
-    <nav>
+
+   <nav>
         <ul>
-            <!-- Enlace directo a la página principal -->
             <li><a href="index.html">Página principal</a></li>
-            
             <li><a href="#">Conóceme</a>
                 <ul>
                     <li><a href="informacion.html">Información personal</a></li>
                     <li><a href="pasatiempos.html">Pasatiempos</a></li>
                 </ul>
             </li>
-            
             <li><a href="#">Segunda parcial</a>
                 <ul>
                     <li><a href="#">Práctica uno</a></li>
@@ -31,8 +28,7 @@
                     <li><a href="comunidad.html">Tecnologías en comunidad</a></li>
                 </ul>
             </li>
-            
-          <li><a href="#">Tercer parcial</a>
+            <li><a href="#">Tercer parcial</a>
                 <ul>
                     <li><a href="edad_mayor_menor.html">Verificador de edad</a></li>
                     <li><a href="temperaturas.html">Conversor de temperaturas</a></li>
@@ -41,22 +37,26 @@
         </ul>
     </nav>
     
-    <section>
+    <section class="contenedor-contenido">
         <aside class="principal">
-            <h2>MI SITIO WEB</h2>
-            <p>Bienvenido a mi sitio web</p>
-            <p>En este espacio encontrarás todas las actividades que voy a realizar en la segunda y tercera parcial de la asignatura de <b><i>Programación de Internet I</i></b>, asignatura dentro del programa Técnico Analista Programador del Bachillerato 8 de la Universidad de Colima.</p>
+           <h2>MIS PASATIEMPOS FAVORITOS</h2>
+           <p>Cuando no estoy estudiando programación, disfruto de diferentes actividades que me ayudan a relajarme y divertirme:</p>
+           
+           <ul>
+               <li><b>Videojuegos:</b> Disfruto mucho jugar en mi PC, especialmente explorar el mundo de <i>Red Dead Redemption 2</i> en Steam. También paso el rato armando mis equipos en <i>eFootball</i>, participando en eventos de <i>Pokémon GO</i> o jugando en mi PlayStation 5 y Nintendo Switch OLED.</li>
+               <li><b>Fotografía:</b> Me encanta salir a capturar imágenes con mi cámara. Mis temas favoritos son los atardeceres en el puerto, los paisajes nocturnos costeros y, de manera muy especial, fotografiar a los gatos que encuentro explorando por los tejados y espacios urbanos.</li>
+               <li><b>Convivencia al aire libre:</b> Disfruto mucho de los fines de semana organizando  y carnes asadas al aire libre con mis amigos para pasar un buen rato.</li>
+           </ul>
         </aside>
-        
+
         <aside class="secundario">
-          <!-- El enlace de YouTube ahora tiene el formato "embed" correcto -->
-          <iframe width="100%" height="300" src="https://www.youtube.com/embed/4xnsmyI5KMQ" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <h2>MI SET-UP</h2>
+            <p>Para disfrutar de mis sesiones de juego y hacer mis proyectos escolares, utilizo una computadora equipada con <b>16 GB de RAM</b> y una tarjeta gráfica <b>NVIDIA GeForce RTX 2050</b>.</p>
         </aside>
     </section>
-    
+
     <footer>
-        <!-- Se modificó el nombre para evitar el espacio en blanco -->
-       <img src="logo_ucol.png" alt="Logo de la Universidad">
+        <img src="logo_ucol.png" alt="Logo Universidad de Colima">
         <div>
             <p><strong>Universidad de Colima</strong></p>
             <p>Bachillerato 8</p>
