@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de evaluación de calificaciones</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #f4f6f9;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* Barra de navegación */
+        header {
+            background-color: #1b365d;
+            color: #fff;
+            padding: 1rem 2rem;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+            align-items: center;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        /* Menú desplegable Tercer Parcial */
+        .dropdown {
+            position: relative;
+        }
+
+        .dropdown-menu {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background-color: #24477a;
+            min-width: 230px;
+            border-radius: 6px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+            z-index: 100;
+            padding: 0.5rem 0;
+        }
+
+        .dropdown:hover .dropdown-menu {
+            display: block;
+        }
+
+        .dropdown-menu li a {
+            display: block;
+            padding: 0.6rem 1rem;
+        }
+
+        .dropdown-menu li a:hover {
+            background-color: #1b365d;
+            text-decoration: none;
+        }
+
+        /* Contenedor principal */
+        .container {
+            max-width: 550px;
+            margin: 2.5rem auto;
+            background: #fff;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+        }
+
+        h1 {
+            text-align: center;
+            color: #1b365d;
+            font-size: 1.6rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group {
+            margin-bottom: 1rem;
+        }
+
+        label {
+            display: block;
+            font-weight: 600;
+            margin-bottom: 0.35rem;
+        }
+
+        input {
+            width: 100%;
+            padding: 0.65rem;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            font-size: 1rem;
+        }
+
+        input:focus {
+            outline: none;
+            border-color: #1b365d;
+        }
+
+        button {
+            width: 100%;
+            padding: 0.8rem;
+            margin-top: 0.5rem;
+            background-color: #1b365d;
+            color: #fff;
+            border: none;
+            border-radius: 6px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background-color 0.2s ease;
+        }
+
+        button:hover {
+            background-color: #274d84;
+        }
+
+        /* Sección de resultados */
+        .resultado-box {
+            margin-top: 1.75rem;
+            padding: 1.25rem;
+            border-radius: 8px;
+            background-color: #f8fafc;
+            border-left: 5px solid #1b365d;
+            display: none;
+        }
+
+        .resultado-box h2 {
+            font-size: 1.2rem;
+            margin-bottom: 0.75rem;
+            color: #1b365d;
+        }
+
+        .resultado-box p {
+            margin-bottom: 0.4rem;
+        }
+
+        .badge {
+            display: inline-block;
+            padding: 0.2rem 0.65rem;
+            border-radius: 4px;
+            font-weight: 700;
+            color: #fff;
+        }
+
+        .aprobado {
+            background-color: #198754;
+        }
+
+        .reprobado {
+            background-color: #dc3545;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li class="dropdown">
+                    <a href="#">Tercer Parcial ▾</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="edad_mayor_menor.html">Verificación de edad</a></li>
+                        <li><a href="temperaturas.html">Conversor de temperaturas</a></li>
+                        <li><a href="calificaciones.html">Sistema de calificaciones</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container">
+        <h1>Sistema de evaluación de calificaciones</h1>
+
+        <form id="formCalificaciones">
+            <div class="form-group">
+                <label for="nombre">Nombre del estudiante:</label>
+                <input type="text" id="nombre" placeholder="Ej. Ana López">
+            </div>
+
+            <div class="form-group">
+                <label for="calificacion1">Primera calificación (0 - 10):</label>
+                <input type="number" id="calificacion1" step="0.1" min="0" max="10" placeholder="Ej. 8.5">
+            </div>
+
+            <div class="form-group">
+                <label for="calificacion2">Segunda calificación (0 - 10):</label>
+                <input type="number" id="calificacion2" step="0.1" min="0" max="10" placeholder="Ej. 9.0">
+            </div>
+
+            <div class="form-group">
+                <label for="calificacion3">Tercera calificación (0 - 10):</label>
+                <input type="number" id="calificacion3" step="0.1" min="0" max="10" placeholder="Ej. 7.5">
+            </div>
+
+            <button type="button" id="btnCalcular">Calcular promedio</button>
+        </form>
+
+        <section id="resultado" class="resultado-box" aria-live="polite"></section>
+    </main>
+
+    <script src="calificaciones.js"></script>
+</body>
+</html>
